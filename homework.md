@@ -24,13 +24,15 @@
 ## **插件安装卸载**
 ### 安装
     1.在左侧打开扩展商店
-    ![avatar](https://github.com/chinaluoluo/mfs-homework/blob/master/image/1.png)
+   ![image](https://github.com/chinaluoluo/mfs-homework/blob/master/image/1.png)
+   
     2.搜索，点击安装
-    ![avatar](https://github.com/chinaluoluo/mfs-homework/blob/master/image/2.png)
+   ![image](https://github.com/chinaluoluo/mfs-homework/blob/master/image/2.png)
 ### 卸载
     1.点击已安装扩展
-    ![avatar](https://github.com/chinaluoluo/mfs-homework/blob/master/image/3.png)
+   ![image](https://github.com/chinaluoluo/mfs-homework/blob/master/image/3.png)
+   
     2.点击设置，点击卸载
-    ![avatar](https://github.com/chinaluoluo/mfs-homework/blob/master/image/4.png)
+   ![image](https://github.com/chinaluoluo/mfs-homework/blob/master/image/4.png)
 
 
