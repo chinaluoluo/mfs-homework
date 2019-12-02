@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    font-family: Helvetica Neue, Helvetica, Arial, Hiragino Sans GB, Hiragino Sans GB W3, WenQuanYi Micro Hei, Microsoft YaHei UI, Microsoft YaHei, sans-serif;
+}
+
+header {
+    height: 300px;
+    background-color: #f4645f;
+    background-image: url(image/header-bg.jpg);
+    position: relative;
+}
+
+#header-title {
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.1;
+    position: absolute;
+    top: 60%;
+    left: 34%;
+}
+
+svg {
+    position: absolute;
+    top: 30%;
+    left: 43%
+}
+
+.mainbody {
+    background-color: #ebebeb;
+}
+
+.navdiv1 {
+    background-color: #fff;
+}
+
+.navdiv {
+    margin: 0 300px;
+    background-color: #fff;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nava {
+    padding: 20px 0px;
+    color: black;
+}
+
+.container {
+    text-align: center;
+    margin: 0 210px;
+}
+
+.articlediv {
+    background-color: #ebebeb;
+    margin: 20px 0;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.article {
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 60px;
+}
+
+.article img {
+    margin-top: 30px;
+    width: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.articlep {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.btndiv {
+    width: 100%;
+    text-align: left;
+}
+
+#ydbtn {
+    background-color: #f4645f;
+    border: 1px solid #f4645f;
+    transition: all .2s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.downbtn {
+    background-color: #f4645f;
+    border: 1px solid #f4645f;
+    transition: all .2s ease-in-out;
+}
+
+.linediv {
+    margin-bottom: 30px;
+    border-top: 1px solid #ebebeb;
+    width: 100%;
+    padding: 21px 0 0;
+}
+
+.aart {
+    margin-top: 30px;
+}
+
+.myside {
+    width: 26%;
+    margin-top: 50px;
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+.downtitle {
+    text-align: left;
+    font-size: 20px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 21px;
+}
+
+.downtitle::after {
+    content: " ";
+    width: 90px;
+    height: 1px;
+    background: #f4645f;
+    position: absolute;
+    left: 12px;
+    bottom: 543px;
+}
+
+.page-number {
+    background: #f4645f;
+    color: #fff;
+    margin: 0 3px;
+    display: inline-block;
+    line-height: 36px;
+    padding: 0 14px;
+    border-radius: 2px;
+}
+
+.pagination a {
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    background: #f4645f;
+    border-radius: 2px;
+}
+
+.pagination a i {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+}
+
+.footer1 {
+    padding: 35px 0 0;
+    background-color: black;
+}
+
+.recent-post {
+    border-bottom: 1px dashed #303030;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    color: #959595;
+}
+
+.post-title {
+    outline: none;
+    color: #959595;
+}
+
+.post-title:hover {
+    color: #f4645f;
+}
+
+.container2 {
+    width: 1080px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.date {
+    color: #505050;
+}
+
+.title {
+    font-size: 1.5em;
+    color: #fff;
+    border-bottom: 1px solid #303030;
+    margin-top: 0;
+    padding-bottom: 7px;
+    margin-bottom: 21px;
+    position: relative;
+}
+
+.title::after {
+    content: "";
+    width: 90px;
+    height: 1px;
+    background: #f4645f;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+
+.tag-cloud a {
+    border: 1px solid #303030;
+    padding: 2px 7px;
+    color: #959595;
+    line-height: 1.5em;
+    display: inline-block;
+    margin: 0 7px 7px 0;
+    transition: all .2s ease;
+}
+
+.tag-cloud a:hover {
+    background-color: #f4645f;
+}
+
+.friend-links a {
+    padding: 2px 7px;
+    color: #959595;
+    line-height: 1.5em;
+    display: inline-block;
+    margin: 0 7px 7px 0;
+    transition: all .2s ease;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #959595;
+}
