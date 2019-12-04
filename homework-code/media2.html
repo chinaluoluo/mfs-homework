@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: gainsboro;
+            padding: 0px;
+            display: flex;
+        }
+        
+        span {
+            background-color: gainsboro;
+            padding: 10px;
+        }
+        
+        span:nth-child(2) {
+            background-color: gray;
+        }
+        
+        #java {
+            display: flex;
+            cursor: pointer;
+        }
+        
+        .sj {
+            width: 0;
+            height: 0;
+            border-top: 4px solid black;
+            border-bottom: 4px solid transparent;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            align-self: center;
+        }
+        
+        ul {
+            display: none;
+            position: absolute;
+            padding: 0 0;
+            width: 130px;
+            top: 30px;
+            left: px;
+            background-color: gainsboro;
+        }
+        
+        #java:hover ul {
+            padding: 0 0;
+            display: block;
+        }
+        
+        li {
+            padding: 10px 10px;
+            list-style: none;
+            margin: 10px 0px;
+        }
+        
+        .line {
+            padding: 0;
+            height: 0px;
+            border: 1px solid gray;
+            margin: 5px 0;
+        }
+        
+        @media only screen and (max-width:768px) {
+            .container span {
+                display: block;
+            }
+            .container {
+                display: block;
+            }
+            ul {
+                margin: 26px 0 0 -56px;
+                position: static;
+                width: -webkit-fill-available;
+            }
+            .sj {
+                align-self: self-start;
+                margin: 9px 0px 0 2px;
+            }
+            .line {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span>菜鸟教程</span>
+        <span>IOS</span>
+        <span>SVN</span>
+        <span id="java">JAVA
+            <div class="sj"></div>
+            <ul>
+                <li class="item">jmeter</li>
+                <li class="item">ejb</li>
+                <li class="item">jasper</li>
+                <li class="line"></li>
+                <li class="item">分离的</li>
+                <li class="line"></li>
+                <li class="item">另一个分离的</li>
+            </ul>
+        </span>
+
+    </div>
+</body>
+
+</html>
