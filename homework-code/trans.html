@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes translate2 {
+            0% {
+                transform: translate(0, 0)
+            }
+            15% {
+                transform: translate(0, -50px)
+            }
+            29% {
+                transform: translate(0, 0)
+            }
+            64% {
+                transform: translate(0, 120px)
+            }
+            100% {
+                transform: translate(0, 0)
+            }
+        }
+        
+        @keyframes translate22 {
+            0% {
+                transform: translate(0, 0)
+            }
+            15% {
+                transform: translate(50px, 0)
+            }
+            29% {
+                transform: translate(0, 0)
+            }
+            64% {
+                transform: translate(-120px, 0)
+            }
+            100% {
+                transform: translate(0, 0)
+            }
+        }
+        
+        @keyframes translate1 {
+            0% {
+                transform: translate(0, 0)
+            }
+            50% {
+                transform: translate(0, 150px)
+            }
+            100% {
+                transform: translate(0, 0)
+            }
+        }
+        
+        @keyframes translate11 {
+            0% {
+                transform: translate(0, 0)
+            }
+            50% {
+                transform: translate(-150px, 0)
+            }
+            100% {
+                transform: translate(0, 0)
+            }
+        }
+        
+        @keyframes translate3 {
+            0% {
+                transform: translate(0, 0)
+            }
+            21% {
+                transform: translate(0, -80px)
+            }
+            42% {
+                transform: translate(0, 0)
+            }
+            71% {
+                transform: translate(0, 110px)
+            }
+            100% {
+                transform: translate(0, 0)
+            }
+        }
+        
+        @keyframes translate33 {
+            0% {
+                transform: translate(0, 0)
+            }
+            21% {
+                transform: translate(80px, -0)
+            }
+            42% {
+                transform: translate(0, 0)
+            }
+            71% {
+                transform: translate(-110px, 0)
+            }
+            100% {
+                transform: translate(0, 0)
+            }
+        }
+        
+        .cls1,
+        .cls2,
+        .cls3 {
+            width: 50px;
+            height: 200px;
+            /* background-color: pink; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        
+        .cls1 {
+            position: absolute;
+            top: 0;
+            left: 50px;
+        }
+        
+        .cls2 {
+            position: absolute;
+            top: 0;
+            left: 100px;
+        }
+        
+        .cls3 {
+            height: 100px;
+            width: 100px;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+            position: absolute;
+            top: 50px;
+            left: 100px;
+        }
+        
+        .blue1,
+        .pink1,
+        .red1,
+        .gray1 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: blue;
+        }
+        
+        .blue1 {
+            animation: translate1 2s infinite linear;
+        }
+        
+        .pink1 {
+            animation: translate1 2s infinite linear 1s;
+        }
+        
+        .blue2 {
+            animation: translate2 2s infinite linear;
+        }
+        
+        .pink2 {
+            animation: translate2 2s infinite linear 1s;
+        }
+        
+        .blue3 {
+            animation: translate3 2s infinite linear;
+        }
+        
+        .pink3 {
+            animation: translate3 2s infinite linear 1s;
+        }
+        
+        .red1 {
+            animation: translate11 2s infinite linear;
+        }
+        
+        .gray1 {
+            animation: translate11 2s infinite linear 1s;
+        }
+        
+        .red2 {
+            animation: translate22 2s infinite linear;
+        }
+        
+        .gray2 {
+            animation: translate22 2s infinite linear 1s;
+        }
+        
+        .red3 {
+            animation: translate33 2s infinite linear;
+        }
+        
+        .gray3 {
+            animation: translate33 2s infinite linear 1s;
+        }
+        
+        .blue3,
+        .pink3,
+        .red3,
+        .gray3 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: blue;
+        }
+        
+        .blue2,
+        .pink2,
+        .red2,
+        .gray2 {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: blue;
+        }
+        
+        .pink1,
+        .pink2,
+        .pink3 {
+            background-color: pink;
+        }
+        
+        .red1,
+        .red2,
+        .red3 {
+            background-color: red;
+        }
+        
+        .gray1,
+        .gray2,
+        .gray3 {
+            background-color: gray;
+        }
+        
+        .div1 {
+            width: 200px;
+            height: 200px;
+            /* background-color: gold; */
+            margin-left: 100px;
+            position: relative;
+            animation: rotate 5s infinite linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <div class="cls1">
+            <div class="blue1"></div>
+            <div class="blue2"></div>
+            <div class="blue3"></div>
+
+        </div>
+        <div class="cls2">
+            <div class="pink1"></div>
+            <div class="pink2"></div>
+            <div class="pink3"></div>
+        </div>
+        <div class="cls3">
+            <div class="red1"></div>
+            <div class="red2"></div>
+            <div class="red3"></div>
+            <div class="gray1"></div>
+            <div class="gray2"></div>
+            <div class="gray3"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

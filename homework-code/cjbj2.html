@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .main {
+            float: left;
+            width: 100%;
+            background-color: pink;
+        }
+        
+        .left {
+            float: left;
+            width: 190px;
+            margin-left: -100%;
+            position: relative;
+            left: -190px;
+            background-color: plum;
+        }
+        
+        .right {
+            float: left;
+            width: 230px;
+            margin-left: -230px;
+            position: relative;
+            right: -230px;
+            background-color: powderblue;
+        }
+        
+        body {
+            padding: 0 230px 0 190px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">main</div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+</body>
+
+</html>
