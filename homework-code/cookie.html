@@ -1,3 +1,4 @@
+<!-- 由于chrome不支持写入cookie，请用edge打开 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +15,7 @@
 </head>
 
 <body>
+
     <div class="shop">
         <div>
             <span class="goods">good1</span>
@@ -68,19 +70,20 @@
 
         function writebycookie() {
             var goodcookie = document.cookie;
-            var everycookie = goodcookie.split(";");
-            var shopcar = document.getElementById("shopcar");
-            for (var i = 0; i < everycookie.length; i++) {
-
-                var everygoodsname = everycookie[i].split("=")[0];
-                var everycount = everycookie[i].split("=")[1];
-                var dom = document.createElement("div");
-                var html = ' <span class="cargoods">' + everygoodsname + '</span>' +
-                    '<span class="goodsnum">数量:' + everycount + '</span>' +
-                    '<button class="deletebtn">删除</button>';
-                dom.innerHTML = html;
-                shopcar.appendChild(dom);
-                adddeletelis();
+            if (!!goodcookie) {
+                var everycookie = goodcookie.split(";");
+                var shopcar = document.getElementById("shopcar");
+                for (var i = 0; i < everycookie.length; i++) {
+                    var everygoodsname = everycookie[i].split("=")[0];
+                    var everycount = everycookie[i].split("=")[1];
+                    var dom = document.createElement("div");
+                    var html = ' <span class="cargoods">' + everygoodsname + '</span>' +
+                        '<span class="goodsnum">数量:' + everycount + '</span>' +
+                        '<button class="deletebtn">删除</button>';
+                    dom.innerHTML = html;
+                    shopcar.appendChild(dom);
+                    adddeletelis();
+                }
             }
         }
 
@@ -97,6 +100,8 @@
 
                     goodsnum[i].innerHTML = "数量:" + count + "";
                     document.cookie = "" + goodsname + "=" + count + "";
+                    console.log(document.cookie);
+                    console.log("1");
                 }
             }
             if (!isexist) {
@@ -107,6 +112,8 @@
                 document.cookie = "" + goodsname + "=" + 1 + "";
                 dom.innerHTML = html;
                 shopcar.appendChild(dom);
+                console.log(document.cookie);
+                console.log(1);
                 adddeletelis();
             }
 
