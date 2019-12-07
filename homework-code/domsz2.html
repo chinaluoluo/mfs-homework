@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="domsz2.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+</head>
+
+<body>
+    <div class="baner"></div>
+    <div id="container1">
+        <div id="container2" class="container1">
+            <div class="item ">
+                <div class="icondiv "> <span id="icon " class="icon iconfont ">&#xe75a;</span></div>
+                <div class="icondiv2 "><span class="icon iconfont ">&#xe67c;</span>1</div>
+                <div class="icondiv3 "><span class="icon iconfont ">&#xe7ac;</span>1</div>
+                <div class="circleleft ">1</div>
+                <div class="blackbottom ">视频1</div>
+            </div>
+        </div>
+        <div class="pages">
+            <div id="bef" class="bef">&lt</div>
+            <div id="page" class="page ">
+
+            </div>
+            <div id="aft" class="aft">&gt</div>
+        </div>
+    </div>
+    <script>
+        function creatitem(no, title, click, reply) {
+            var dom = document.createElement("div");
+            dom.setAttribute("class", "item");
+            var html = '<div class="icondiv "> <span id="icon " class="icon iconfont ">&#xe75a;</span></div>' +
+                '<div class="icondiv2 "><span class="icon iconfont ">&#xe67c;</span>' + click + '</div>' +
+                '<div class="icondiv3 "><span class="icon iconfont ">&#xe7ac;</span>' + reply + '</div>' +
+                '<div class="circleleft ">' + no + '</div>' +
+                '<div class="blackbottom ">' + title + '</div>';
+            dom.innerHTML = html;
+            return dom;
+        }
+        var data = [];
+        var n = 100;
+        for (var i = 0; i < n; i++) {
+            data.push({
+                no: i,
+                title: "标题 " + i,
+                click: i,
+                reply: 1
+            });
+        }
+        var container2 = document.getElementById("container2");
+
+        function getData(page) {
+            return data.slice(page * 12, page * 12 + 12);
+        }
+
+        function fillDom(page) {
+            while (container2.hasChildNodes()) {
+                container2.removeChild(container2.lastChild);
+            }
+            var data1 = getData(page);
+            var doms = data1.map(function(i) {
+                return creatitem(i.no, i.title, i.reply, i.click);
+            })
+
+
+            doms.forEach(function(i) {
+                container2.appendChild(i);
+            })
+        }
+
+        var adiv = document.getElementById("page");
+        for (var j = 0; j < Math.ceil(n / 12); j++) {
+            var as = document.createElement("a");
+            as.setAttribute("class", "aunvisit")
+            var x = j + 1;
+            as.innerText = x;
+            adiv.appendChild(as);
+        }
+        var pageas = document.querySelectorAll(".page a");
+        for (let i = 0; i < pageas.length; i++) {
+            pageas[i].addEventListener("click", function() {
+                fillDom(i);
+                for (var j = 0; j < pageas.length; j++) {
+                    pageas[j].setAttribute("class", "aunvisit");
+                }
+                pageas[i].setAttribute("class", "avisit");
+            })
+        }
+        fillDom(0);
+        pageas[0].setAttribute("class", "avisit");
+
+        var bef = document.getElementById("bef");
+        var aft = document.getElementById("aft");
+        bef.addEventListener("click", function() {
+            var nowa = document.getElementsByClassName("avisit");
+            var nowpage = nowa[0].innerText;
+            if (nowpage != 1) {
+                var befpage = nowpage - 1;
+                fillDom(befpage - 1);
+                for (var j = 0; j < pageas.length; j++) {
+                    pageas[j].setAttribute("class", "aunvisit");
+                }
+                pageas[befpage - 1].setAttribute("class", "avisit");
+            }
+        })
+
+        aft.addEventListener("click", function() {
+            var nowa = document.getElementsByClassName("avisit");
+            var nowpage = nowa[0].innerText;
+            if (nowpage != Math.ceil(n / 12)) {
+                var befpage = nowpage;
+                fillDom(befpage);
+                for (var j = 0; j < pageas.length; j++) {
+                    pageas[j].setAttribute("class", "aunvisit");
+                }
+                pageas[befpage].setAttribute("class", "avisit");
+            }
+        })
+    </script>
+</body>
+
+</html>

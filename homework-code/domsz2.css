@@ -1,0 +1,102 @@
+.baner {
+    height: 270px;
+    background-image: url(image/banner.jpg);
+}
+
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+    height: 140px;
+    margin: 10px 0;
+    width: 22%;
+    background-color: blanchedalmond;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.circleleft {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 23px;
+    background-color: #20b6d2;
+}
+
+.blackbottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: #00474c;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+}
+
+.icondiv {
+    position: relative;
+    align-self: center;
+    top: -11px;
+}
+
+.icondiv2 {
+    position: absolute;
+    right: 40px;
+    top: 5px;
+}
+
+.page {
+    text-align: center;
+    align-self: flex-end;
+}
+
+.pages {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bef {
+    cursor: pointer;
+}
+
+.aft {
+    cursor: pointer;
+}
+
+.icondiv3 {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+}
+
+#icon {
+    margin: 0 auto;
+    font-size: 60px;
+}
+
+.avisit {
+    padding: 2px 8px;
+    background-color: #ee6e73;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.aunvisit {
+    padding: 2px 8px;
+    cursor: pointer;
+    margin: 0 5px;
+}

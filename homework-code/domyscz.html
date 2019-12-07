@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list"></ul>
+    <script>
+        var list = document.getElementById("list");
+        var newDiv = document.createElement("li");
+        var newContent = document.createTextNode("1");
+        var newDiv2 = document.createElement("li");
+        var newContent2 = document.createTextNode("2");
+        newDiv.appendChild(newContent);
+        list.appendChild(newDiv);
+        newDiv2.appendChild(newContent2);
+        list.appendChild(newDiv2);
+        // list.innerHTML = " <li>1</li><li>2</li>"
+    </script>
+</body>
+
+</html>

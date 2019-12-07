@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function checkPassword(str) {
+            if (str.length > 16 || str.length < 6) {
+                console.log("应为6-16个字符");
+                return 0;
+            }
+            var count = 0;
+            var reg1 = /[A-Z]/;
+            var reg2 = /[a-z]/;
+            var reg3 = /\d/;
+            var reg4 = /_/;
+            if (reg1.exec(str)) couont += 1;
+            if (reg2.exec(str)) couont += 1;
+            if (reg3.exec(str)) couont += 1;
+            if (reg4.exec(str)) couont += 1;
+            if (count < 3) {
+                console.log("应该包括小写字母，大写字母，数字，下划线中的至少3个");
+                return 0;
+            }
+            var reg5 = /^[A-Za-z_]/;
+            if (reg5.exec(str)) {
+                console.log("首字符为字母或者下划线");
+                return 0;
+            }
+            var reg6 = /^[A-Za-z][A-Za-z\d_]{5,15}$/;
+            if (reg4.exec(str)) {
+                console.log("不能包含除下划线以外的其他特殊字符");
+                return 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

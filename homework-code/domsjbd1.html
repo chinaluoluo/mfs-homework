@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            width: 400px;
+            height: 70px;
+            background-color: powderblue;
+            text-align: center;
+            line-height: 70px;
+        }
+        
+        .spandiv {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .div4 {
+            width: 1200px;
+            height: 150px;
+            background-color: rosybrown;
+            margin-left: 160px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spandiv">
+        <span class="span1">tab1</span>
+        <span class="span1">tab2</span>
+        <span class="span1">tab3</span>
+    </div>
+    <div class="div4">tab1的div</div>
+    <div class="div4">tab2的div</div>
+    <div class="div4">tab3的div</div>
+    <script>
+        var span = document.getElementsByClassName("span1")
+        var div = document.getElementsByClassName("div4")
+        for (let i = 0; i < 3; i++) {
+            span[i].addEventListener('click', function() {
+                for (let j = 0; j < 3; j++) {
+                    div[j].style.display = "none"
+                }
+                div[i].style.display = "block"
+            })
+        }
+    </script>
+</body>
+
+</html>

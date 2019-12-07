@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="signup" action="#" onsubmit="return onSignupFormSubmit()">
+        <p id="signup-error" style="color:red"></p>
+        <p>
+            用户名:
+            <input id="username" type="text" name="username">
+        </p>
+        <p>
+            口令:
+            <input type="password" id="password" name="password">
+        </p>
+        <p>
+            重复口令:
+            <input type="password" id="password2">
+        </p>
+        <p>
+            <button type="submit">提交</button>
+            <button type="reset">重置</button>
+        </p>
+    </form>
+    <script>
+        function onSignupFormSubmit() {
+            var pattern = /^[A-Za-z]{1}[\dA-Za-z_]{5,15}$/;
+            var pattern2 = /^[\dA-Za-z_~`!@#\$%\^&\*\(\)\[\]\{\}:;'",\.\?\\\/\<\>+-=]{8,20}$/;
+            var password = document.getElementById("password");
+            var password2 = document.getElementById("password2");
+            var username = document.getElementById("username");
+            if (!pattern.test(username.value)) {
+
+                alert("用户名输入有误")
+            }
+            if (!pattern2.test(password.value)) {
+                alert("口令输入有误")
+            }
+            if (password.value != password2.value) {
+                alert("两次口令不一致")
+            }
+
+        }
+    </script>
+</body>
+
+</html>

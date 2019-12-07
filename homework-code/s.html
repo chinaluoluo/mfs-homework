@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes loading2 {}
+        
+        .cls1 {
+            display: flex;
+        }
+        
+        .cls1::before {
+            content: " ";
+            width: 8px;
+            height: 50px;
+            color: pink;
+        }
+        
+        .cls1::after {
+            content: " ";
+            width: 8px;
+            height: 50px;
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cls1">
+        <div class="item"></div>
+    </div>
+</body>
+
+</html>

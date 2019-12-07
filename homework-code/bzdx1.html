@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var date = new Date();
+        date.setMonth(2);
+        date.setFullYear(2017);
+        date.setDate(5);
+        date.setHours(10);
+        date.setMinutes(3);
+        date.setSeconds(8);
+
+        function addling(a) {
+            if (a < 10) {
+                a = "0" + a;
+            }
+            return a;
+        }
+
+        function showdate(date) {
+            var year = date.getFullYear();
+            var month = date.getMonth();
+            var day = date.getDate();
+            var hours = date.getHours();
+            var min = date.getMinutes();
+            var sec = date.getSeconds();
+            month = addling(month);
+            day = addling(day);
+            hours = addling(hours);
+            min = addling(min);
+            sec = addling(sec);
+            var s = "" + year + "-" + month + "-" + day + " " + hours + ":" + min + ":" + sec + "";
+            console.log(s);
+        }
+        showdate(date);
+    </script>
+</body>
+
+</html>

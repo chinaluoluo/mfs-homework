@@ -1,0 +1,37 @@
+<script>
+    function Animal() {
+
+    }
+    Animal.prototype.eat = function() {
+        return "Animal eat";
+    }
+    Animal.prototype.sleep = function() {
+        return "Animal sleep";
+    }
+
+    function Dog() {
+
+    }
+    Dog.prototype.bark = function() {
+        return "dog bark";
+    }
+    Dog.prototype.__proto__ = Animal.prototype;
+
+    Dog.prototype.sleep = function() {
+        return "Dog sleep";
+    }
+    Dog.prototype.eat = function() {
+        return "Dog eat";
+    }
+
+    function Human() {
+
+    }
+    Human.prototype.sleep = function() {
+        return "Human sleep";
+    }
+    Human.prototype.eat = function() {
+        return "Human eat";
+    }
+    Human.prototype.__proto__ = Animal.prototype;
+</script>
