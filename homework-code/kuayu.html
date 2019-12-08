@@ -9,14 +9,13 @@
 </head>
 
 <body>123
-    <iframe src="http://a.com/canvas.html"></iframe>456
+     <iframe src="http://www.a.com:8000/canvas.html"></iframe>456
     <script>
         //同时在canvas中也降域为a.com
         document.domain = "a.com"
         setTimeout(() => {
             console.log(window.frames[0].document.getElementById("test"))
         }, 1000);
-    </script>
 </body>
 
 </html>
